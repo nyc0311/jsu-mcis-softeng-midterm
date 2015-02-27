@@ -26,7 +26,19 @@ public class ConnectFourTest{
     
     @Test(expected=ColumnFullException.class)
     public void testDroppingOnAFullColumnShouldThrowException() {
-        
+         ConnectFour c = new ConnectFour();
+		c.dropTokenInColumn(1);
+        c.dropTokenInColumn(1);
+        c.dropTokenInColumn(1);
+        c.dropTokenInColumn(1);
+        c.dropTokenInColumn(1);
+		c.dropTokenInColumn(1);
+		c.dropTokenInColumn(1);
+        boolean abletodrop = c.dropTokenInColumn(1);
+        assertTrue(abletodrop);
+        abletodrop = c.dropTokenInColumn(1);
+        assertFalse(abletodrop);
+		 
     }
     
 }
